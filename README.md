@@ -29,6 +29,17 @@ EXPERIMENT_PROJECT = 'full_blank_2'
 EXPERIMENT_NAME = 'full_blank_3'
 ```
 
+## Testing
+If you want to run the test cases on our provided test data, you can run:
+```
+python run_the_instances.py
+```
+before run it, make sure you have activated the MAPF environment already.
+Additionally, during the testing phase, we recommend changing the `EPISODE_LEN` parameter in `alg_parameters.py` from `256` to `512`.
+```
+EPISODE_LEN from 256 -> 512
+```
+
 ## Reference
 If this repository is helpful to you, please cite our work by:
 ```
@@ -37,15 +48,5 @@ If this repository is helpful to you, please cite our work by:
   author={He, Chengyang and Duhan, Tanishq and Tulsyan, Parth and Kim, Patrick and Sartoretti, Guillaume},
   journal={arXiv preprint arXiv:2408.03063},
   year={2024}
-}
-```
-```
-@inproceedings{he2024alpha,
-  title={Alpha: Attention-based long-horizon pathfinding in highly-structured areas},
-  author={He, Chengyang and Yang, Tianze and Duhan, Tanishq and Wang, Yutong and Sartoretti, Guillaume},
-  booktitle={2024 IEEE International Conference on Robotics and Automation (ICRA)},
-  pages={14576--14582},
-  year={2024},
-  organization={IEEE}
 }
 ```
