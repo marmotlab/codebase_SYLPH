@@ -26,12 +26,10 @@ class Agent():
         self.svo_distri = 1 / EnvParameters.N_SVOs * np.ones(EnvParameters.N_SVOs)
 
         self.invalidActions = []
-        # static invalid Actions
 
         self.world = world
 
         self.restrictedAction = dict()
-        # otherAgent restricted Actions (represented as {x:[[a, y], ...]} meaning x action is invalid if agent 'a' takes y action simultaneously)
 
         self.previousAction = -1
 
@@ -307,18 +305,7 @@ class MapfGym():
             return list_of_rows
 
         def get_agent_paths(world, agent_coords, agent_goals):
-            """
-            Returns A* path for each agent.
 
-            Args:
-                world (2D list): The world grid representing the environment.
-                agent_coords (list): List of agent coordinates in the format [[x1, y1], [x2, y2], ...].
-                agent_goals (list): List of agent goals in the format [[x1, y1], [x2, y2], ...].
-
-            Returns:
-                list: A list of paths, where each path is a list of coordinates [[x1, y1], [x2, y2], ...].
-
-            """
             paths = []  # list of paths for each agent
             for i in range(EnvParameters.N_AGENTS):
                 start = tuple(agent_coords[i])

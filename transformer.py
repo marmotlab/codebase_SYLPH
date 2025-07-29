@@ -133,13 +133,7 @@ class MultiHeadAttention(nn.Module):
             param.data.uniform_(-stdv, stdv)
 
     def forward(self, q, h=None, mask=None):
-        """
-                :param q: queries (batch_size, n_query, input_dim)
-                :param h: data (batch_size, graph_size, input_dim)
-                :param mask: mask (batch_size, n_query, graph_size) or viewable as that (i.e. can be 2 dim if n_query == 1)
-                Mask should contain 1 if attention is not possible (i.e. mask is negative adjacency)
-                :return:
-                """
+
         if h is None:
             h = q
 
