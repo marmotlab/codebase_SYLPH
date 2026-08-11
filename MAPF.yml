@@ -338,6 +338,7 @@ dependencies:
     - gurobipy==11.0.3
     - gym==0.19.0
     - gym-notices==0.0.8
+    - huggingface-hub>=0.20
     - imageio-ffmpeg==0.4.7
     - importlib-resources==5.10.0
     - iniconfig==1.1.1

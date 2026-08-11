@@ -4,14 +4,14 @@ import datetime
 
 
 class EnvParameters:
-    N_AGENTS = 8  # number of agents used in training
+    N_AGENTS = 50  # number of agents used in training
     N_ACTIONS = 5
     N_SVOs = 10
-    EPISODE_LEN = 256  # maximum episode length in training
+    EPISODE_LEN = 512  # maximum episode length in training
     FOV_SIZE = 9
     FOV_Heuristic = 5
-    WORLD_SIZE = (10, 40)
-    OBSTACLE_PROB = (0.0, 0.3)
+    WORLD_SIZE = (32, 32)
+    OBSTACLE_PROB = (0.19, 0.2)
     ACTION_COST = -0.3
     IDLE_COST = -0.3
     GOAL_REWARD = 0.0
